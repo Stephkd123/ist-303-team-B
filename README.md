@@ -38,18 +38,25 @@ User Stories
 6.	As a ride-sharing user, I want to integrate my Uber/Lyft account so that I can book a ride directly from the app.
 •	Estimated Time: 15 days
 7.	As a visitor, I want to receive recommendations based on budget preferences so that I can choose an affordable transport option.
-•	Estimated Time: 6 days
-8.	As an admin, I want to manage transport service integrations to ensure accurate data updates.
+•	Estimated Time: 6 days (Stephen Keyen)
+- tasks (3days) - Defining budget criteria (i.e low: <$5, medium: $5-$10, high: >$10)
+- Modify API for budget filtering
+- Write unit tests(using pytest)
+- tasks2 (3days) - Enhance sorting logic
+- Add Error handling
+- Optimize API response format
+- final testing and documentation
+9.	As an admin, I want to manage transport service integrations to ensure accurate data updates.
 •	Estimated Time: 10 days
-9.	As a developer, I want to integrate an interactive map feature so that users can visualize transport routes.
+10.	As a developer, I want to integrate an interactive map feature so that users can visualize transport routes.
 •	Estimated Time: 14 days
-10.	As a visitor, I want the app to provide emergency transport options (e.g., hospitals and police stations) so that I can quickly access help if needed.
+11.	As a visitor, I want the app to provide emergency transport options (e.g., hospitals and police stations) so that I can quickly access help if needed.
 •	Estimated Time: 8 days
-11.	As a visitor, I want the app to offer multilingual support so that I can navigate it in my preferred language.
+12.	As a visitor, I want the app to offer multilingual support so that I can navigate it in my preferred language.
 •	Estimated Time: 7 days
-12.	As a visitor with disabilities, I want the app to highlight wheelchair-friendly transport options so that I can travel independently.
+13.	As a visitor with disabilities, I want the app to highlight wheelchair-friendly transport options so that I can travel independently.
 •	Estimated Time: 8 days
-13.	As a visitor, I want AI to learn my preferences and suggest optimized routes so that I can travel more efficiently.
+14.	As a visitor, I want AI to learn my preferences and suggest optimized routes so that I can travel more efficiently.
 •	Estimated Time: 10 days
 
 

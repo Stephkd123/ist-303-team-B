@@ -30,9 +30,18 @@ User Stories
 •	Estimated Time: 10 days
 2.	As a visitor, I want to see estimated travel time and cost for each transport option so that I can plan my trip effectively.
 •	Estimated Time: 7 days
-3.	As a visitor, I want to receive real-time traffic and transit updates so that I can avoid delays.
+- Research and gather APIs to estimate travel time and cost (e.g., Google Maps, Uber, Lyft, and public transit APIs).
+- Design the UI layout to display travel time and cost for different transport options.
+- Implement API integration to fetch travel time and cost
+- Process and structure API data for seamless display in the app.
+- Implement filtering/sorting functionality for different transport modes.
+- Test API responses for accuracy and performance.
+- Conduct user testing to ensure usability and effectiveness.
+- Document implementation details and known issues.
+
+4.	As a visitor, I want to receive real-time traffic and transit updates so that I can avoid delays.
 •	Estimated Time: 12 days
-4.	As a visitor, I want to see the nearest public transport stations or ride-sharing pickup points so that I can easily access transport options.
+5.	As a visitor, I want to see the nearest public transport stations or ride-sharing pickup points so that I can easily access transport options.
 •	Estimated Time: 8 days (Charlize Andaya)
 - Use GPS to find the user’s location.
 - Get data on public transport stations (bus, metro, train) and ride-sharing pickup points (Uber, Lyft) from APIs.

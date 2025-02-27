@@ -5,7 +5,8 @@ Team Members-
 3.	Rohini Vishwanathan
 4.	Tracy Gaolese
 5.	Charlize Andaya
-6.	GitHub Repository: https://github.com/Stephkd123/ist-303-team-B.git 
+
+GitHub Repository: https://github.com/Stephkd123/ist-303-team-B.git 
 
 Project Description
 The Olympic Transport Guide is an AI-driven transport recommendation application designed to assist visitors and attendees of the 2028 Los Angeles Olympic Games in navigating the city efficiently. The app will provide real-time traffic updates, public transit schedules, ride-sharing integrations (Uber, Lyft), and eco-friendly transport options.
@@ -32,12 +33,21 @@ User Stories
 3.	As a visitor, I want to receive real-time traffic and transit updates so that I can avoid delays.
 •	Estimated Time: 12 days
 4.	As a visitor, I want to see the nearest public transport stations or ride-sharing pickup points so that I can easily access transport options.
-•	Estimated Time: 8 days
-5.	As an event attendee, I want to filter transport options based on sustainability (e.g., public transport and e-scooters) so that I can choose eco-friendly options.
+•	Estimated Time: 8 days (Charlize Andaya)
+- Use GPS to find the user’s location. [Estimated Time: 1-2 days]
+- Get data on public transport stations (bus, metro, train) and ride-sharing pickup points (Uber, Lyft) from APIs.
+- Show nearest locations on an interactive map. 
+- Display transportation options in a list for accessibility. 
+- Build a filter for users to choose between public transport, ride-sharing, or both.  
+- Have a search feature so users can manually enter a location and find its nearby public transport stations/ride-sharing pickup points.
+- Show details on wait times, prices, and distance for transport options. 
+- Test location/transport options and fix bugs/issues. 
+  
+6.	As an event attendee, I want to filter transport options based on sustainability (e.g., public transport and e-scooters) so that I can choose eco-friendly options.
 •	Estimated Time: 6 days
-6.	As a ride-sharing user, I want to integrate my Uber/Lyft account so that I can book a ride directly from the app.
+7.	As a ride-sharing user, I want to integrate my Uber/Lyft account so that I can book a ride directly from the app.
 •	Estimated Time: 15 days
-7.	As a visitor, I want to receive recommendations based on budget preferences so that I can choose an affordable transport option.
+8.	As a visitor, I want to receive recommendations based on budget preferences so that I can choose an affordable transport option.
 •	Estimated Time: 6 days (Stephen Keyen)
 - tasks (3days) - Defining budget criteria (i.e low: <$5, medium: $5-$10, high: >$10)
 - Modify API for budget filtering

@@ -53,7 +53,31 @@ User Stories
 - Test location/transport options and fix bugs/issues. 
   
 6.	As an event attendee, I want to filter transport options based on sustainability (e.g., public transport and e-scooters) so that I can choose eco-friendly options.
-•	Estimated Time: 6 days
+•	Estimated Time: 6 days (Rohini Vishwanathan)
+#### Task Breakdown & Timeline  
+
+##### Day 1: Research & Data Gathering  
+- Define what "sustainable transport" means (public transport, e-scooters, bike-sharing, EV ride-shares). *(½ day)*  
+- Get data from APIs (Google Maps API, LA Metro API, ride-sharing services) to pull real-time sustainable transport options. *(½ day)*  
+
+##### Day 2: UI/UX Design  
+- Build an easy-to-use filter (toggle, dropdown) to let users select sustainable transport options. *(1 day)*  
+
+##### Day 3: Backend & Data Processing  
+- Modify the recommendation engine to prioritize eco-friendly options when the filter is selected. *(½ day)*  
+- Write backend logic to fetch and display the correct results. *(1 day)*  
+
+##### Day 4: Testing & Validation  
+- Test the filter functionality to ensure proper filtering. *(½ day)*  
+- Double-check the accuracy of displayed transport options. *(½ day)*  
+
+##### Day 5: Performance & Refinements  
+- Optimize performance so filtering does not slow down recommendations. *(½ day)*  
+- Gather user feedback and make refinements. *(½ day)*  
+
+##### Day 6: Final Review & Documentation  
+- Document how the filter works and how developers can update it. *(1 day)*  
+
 7.	As a ride-sharing user, I want to integrate my Uber/Lyft account so that I can book a ride directly from the app.
 •	Estimated Time: 15 days
 8.	As a visitor, I want to receive recommendations based on budget preferences so that I can choose an affordable transport option.

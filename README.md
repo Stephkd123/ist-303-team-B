@@ -34,7 +34,7 @@ User Stories
 •	Estimated Time: 12 days
 4.	As a visitor, I want to see the nearest public transport stations or ride-sharing pickup points so that I can easily access transport options.
 •	Estimated Time: 8 days (Charlize Andaya)
-- Use GPS to find the user’s location. [Estimated Time: 1-2 days]
+- Use GPS to find the user’s location.
 - Get data on public transport stations (bus, metro, train) and ride-sharing pickup points (Uber, Lyft) from APIs.
 - Show nearest locations on an interactive map. 
 - Display transportation options in a list for accessibility. 
@@ -68,5 +68,18 @@ User Stories
 •	Estimated Time: 8 days
 14.	As a visitor, I want AI to learn my preferences and suggest optimized routes so that I can travel more efficiently.
 •	Estimated Time: 10 days
+
+Meeting Notes
+
+Meeting Date: 02/26
+We briefly met to discuss our individual progress on decomposing our user stories into tasks. Each group member will be in charge of one user story and its tasks. The five user stories we will be focusing on are:
+- As a visitor, I want to enter my location and destination to receive transport recommendations so that I can choose the best option.  Estimated Time: 10 days (Rhett)
+- As a visitor, I want to see estimated travel time and cost for each transport option so that I can plan my trip effectively. Estimated Time: 7 days (Tracy)
+- As a visitor, I want to see the nearest public transport stations or ride-sharing pickup points so that I can easily access transport options. Estimated Time: 8 days (Charlize)
+- As an event attendee, I want to filter transport options based on sustainability (e.g., public transport and e-scooters) so that I can choose eco-friendly options. Estimated Time: 6 days (Rohini)
+- As a visitor, I want to receive recommendations based on budget preferences so that I can choose an affordable transport option. Estimated Time: 6 days (Stephen)
+
+We plan on writing individual documents of the tasks for our assigned user stories to make updating the README easier. Rhett will be updating the README to reflect the tasks we listed for each user story. We also discussed briefly that the burn down chart to monitor our team’s progress will be completed by today’s class session.  We will also be uploading meeting notes from today 02/26 and this past Sunday 02/23. 
+
 
 

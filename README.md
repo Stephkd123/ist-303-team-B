@@ -93,15 +93,10 @@ User Stories
 •	Estimated Time: 10 days
 10.	As a developer, I want to integrate an interactive map feature so that users can visualize transport routes.
 •	Estimated Time: 14 days
-11.	As a visitor, I want the app to provide emergency transport options (e.g., hospitals and police stations) so that I can quickly access help if needed.
-•	Estimated Time: 8 days
 12.	As a visitor, I want the app to offer multilingual support so that I can navigate it in my preferred language.
 •	Estimated Time: 7 days
-13.	As a visitor with disabilities, I want the app to highlight wheelchair-friendly transport options so that I can travel independently.
-•	Estimated Time: 8 days
-14.	As a visitor, I want AI to learn my preferences and suggest optimized routes so that I can travel more efficiently.
-•	Estimated Time: 10 days
 
+Milestone 1: 
 Meeting Notes
 
 Meeting Date: 02/26

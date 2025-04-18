@@ -52,6 +52,7 @@ def login():
             return render_template('login.html', error='Invalid credentials')
     return render_template('login.html')
 
+
 @app.route('/home', methods=['GET', 'POST'])
 def index():
     if 'user' not in session:

@@ -3,6 +3,8 @@ import os
 import requests
 import pandas as pd
 from dotenv import load_dotenv
+import sqlite3
+from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 app.secret_key = 'your-secret-key' #secure key in production
@@ -34,6 +36,11 @@ def get_google_travel_data(origin, destination, mode="driving"):
         }
     return None
 
+def get_db_connection():
+    conn = sqlite3.connect('database.db')
+    conn.row_factory = sqlite3.Row
+    return conn
+
 def get_uber_estimate():
     return {"mode": "Uber", "time": "Varies", "distance": "Varies", "cost": "$10 - $25"}
 
@@ -45,13 +52,46 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        if USER_CREDENTIALS.get(username) == password:
+        
+        conn = sqlite3.connect('gtfs_data.db')
+        cursor = conn.cursor()
+        cursor.execute("SELECT password FROM users WHERE username = ?", (username,))
+        record = cursor.fetchone()
+        conn.close()
+
+        if record and check_password_hash(record[0], password):
             session['user'] = username
             return redirect(url_for('index'))
         else:
             return render_template('login.html', error='Invalid credentials')
+
     return render_template('login.html')
 
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        conn = sqlite3.connect('database.db')
+        cursor = conn.cursor()
+
+        # Check if username exists
+        cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
+        if cursor.fetchone():
+            conn.close()
+            return render_template('signup.html', error='Username already exists.')
+
+        # Store hashed password
+        hashed_password = generate_password_hash(password)
+
+        cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, hashed_password))
+        conn.commit()
+        conn.close()
+
+        return redirect(url_for('login'))
+
+    return render_template('signup.html')
 
 @app.route('/home', methods=['GET', 'POST'])
 def index():

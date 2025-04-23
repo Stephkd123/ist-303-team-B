@@ -1,4 +1,4 @@
-Olympic Transport Guide - Part A
+Olympic Transport Guide 
 Team Members- 
 1.	Rhett Carter
 2.	Stephen Keyen

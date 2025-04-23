@@ -10,7 +10,7 @@ Team Members:
 
 ## Project Description
 
-The Olympic Transport Guide is an AI-driven transport recommendation application designed to assist visitors and attendees of the 2028 Los Angeles Olympic Games navigate the city efficiently. The app will provide real-time traffic updates, public transit schedules, ride-sharing integrations (Uber, Lyft), and eco-friendly transport options.
+The Olympic Transport Guide is a transport recommendation application designed to assist visitors and attendees of the 2028 Los Angeles Olympic Games navigate the city efficiently. The app will provide real-time traffic updates, public transit schedules, ride-sharing integrations (Uber, Lyft), and eco-friendly transport options.
 The system will personalize recommendations based on user location, budget, sustainability preferences, and time constraints to ensure an optimal travel experience during the event
 ---
 ## Relevant Project Stakeholders
@@ -103,14 +103,14 @@ The system will personalize recommendations based on user location, budget, sust
 
 ## Tech Stack
 
-- **Language:** Python 3.11  
+- **Language:** Python 3.12  
 - **Framework:** Flask  
 - **Frontend:** HTML, CSS (with embedded styling)  
 - **APIs:** Google Maps API, LA Metro API, Uber/Lyft APIs  
 - **Database:** (To be added)  
 - **Version Control:** Git & GitHub  
-- **Testing:** `pytest`,  
-- **Package Management:** (To be added)
+- **Testing:** `pytest` 
+
 
 ---
 
@@ -145,7 +145,7 @@ We briefly met to discuss our progress on decomposing our user stories into task
 - As an event attendee, I want to filter transport options based on sustainability (e.g., public transport and e-scooters) so that I can choose eco-friendly options. Estimated Time: 6 days (Rohini)
 - As a visitor, I want to receive recommendations based on budget preferences so that I can choose an affordable transport option. Estimated Time: 6 days (Stephen)
 
-We plan on writing individual documents of the tasks for our assigned user stories to make updating the README easier. Rhett will be updating the README to reflect the tasks we listed for each user story. We also discussed briefly that the burn down chart to monitor our team’s progress will be completed by today’s class session.  We will also be uploading meeting notes from today 02/26 and this past Sunday 02/23. 
+We plan on writing individual documents for the tasks for our assigned user stories to make updating the README easier. Rhett will be updating the README to reflect the tasks we listed for each user story. We also discussed briefly that the burn-down chart to monitor our team’s progress will be completed by today’s class session.  We will also be uploading meeting notes from today, 02/26, and this past Sunday, 02/23. 
 
 
 

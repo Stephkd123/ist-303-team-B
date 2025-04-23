@@ -1,34 +1,35 @@
-Olympic Transport Guide 
+# 🧭 Olympic Transport Guide 
+
 Team Members- 
 1.	Rhett Carter
 2.	Stephen Keyen
 3.	Rohini Vishwanathan
 4.	Tracy Gaolese
 5.	Charlize Andaya
+---
+## GitHub Repository: https://github.com/Stephkd123/ist-303-team-B.git 
+---
+# Project Description
 
-GitHub Repository: https://github.com/Stephkd123/ist-303-team-B.git 
-
-Project Description
-The Olympic Transport Guide is an AI-driven transport recommendation application designed to assist visitors and attendees of the 2028 Los Angeles Olympic Games in navigating the city efficiently. The app will provide real-time traffic updates, public transit schedules, ride-sharing integrations (Uber, Lyft), and eco-friendly transport options.
+The Olympic Transport Guide is an AI-driven transport recommendation application designed to assist visitors and attendees of the 2028 Los Angeles Olympic Games navigate the city efficiently. The app will provide real-time traffic updates, public transit schedules, ride-sharing integrations (Uber, Lyft), and eco-friendly transport options.
 The system will personalize recommendations based on user location, budget, sustainability preferences, and time constraints to ensure an optimal travel experience during the event.
-
-Relevant Project Stakeholders
+---
+## Relevant Project Stakeholders
 1.	End Users (Olympic Visitors & Tourists): Travelers needing real-time transport recommendations.
 2.	Los Angeles Public Transit Authorities: Agencies managing buses, metro, and other public transport systems.
 3.	Ride-sharing Companies (Uber, Lyft, etc.): Private transport service providers.
 4.	City of Los Angeles Government: Regulatory bodies overseeing transport policies.
-5.	Local Businesses & Hotels: Hotels and businesses benefiting from tourism.
-6.	Olympic Organizing Committee: Officials planning logistics for the Games.
+5.	Local Businesses & Hotels: Hotels and businesses benefit from tourism.
+6.	Olympic Organizing Committee: Officials are planning logistics for the Games.
 7.	Tech Development Team: Developers, UI/UX designers, and data engineers building the app.
 8.	Marketing & Outreach Team: Teams responsible for promoting and educating users about the app.
 9.	Accessibility Advocacy Groups: Organizations ensuring the app supports wheelchair-friendly routes and inclusive travel solutions.
 10.	Data Providers: Google Maps API, LA Metro API, and real-time traffic monitoring systems.
 11.	Sustainability Partners: Companies supporting electric scooters, bike-sharing, and EV ride-share options.
+---
+## User Stories
 
-User Stories
-1.	As a visitor, I want to enter my location and destination to receive transport recommendations so that I can choose the best option.
-•	Estimated Time: 10 days
-2.	As a visitor, I want to see estimated travel time and cost for each transport option so that I can plan my trip effectively.
+1. As a visitor, I want to see the estimated travel time and cost for each transport option so that I can plan my trip effectively.
 •	Estimated Time: 7 days
 - Research and gather APIs to estimate travel time and cost (e.g., Google Maps, Uber, Lyft, and public transit APIs).
 - Design the UI layout to display travel time and cost for different transport options.
@@ -39,9 +40,7 @@ User Stories
 - Conduct user testing to ensure usability and effectiveness.
 - Document implementation details and known issues.
 
-4.	As a visitor, I want to receive real-time traffic and transit updates so that I can avoid delays.
-•	Estimated Time: 12 days
-5.	As a visitor, I want to see the nearest public transport stations or ride-sharing pickup points so that I can easily access transport options.
+2. As a visitor, I want to see the nearest public transport stations or ride-sharing pickup points so that I can easily access transport options.
 •	Estimated Time: 8 days (Charlize Andaya)
 - Use GPS to find the user’s location.
 - Get data on public transport stations (bus, metro, train) and ride-sharing pickup points (Uber, Lyft) from APIs.
@@ -50,11 +49,35 @@ User Stories
 - Build a filter for users to choose between public transport, ride-sharing, or both.  
 - Have a search feature so users can manually enter a location and find its nearby public transport stations/ride-sharing pickup points.
 - Show details on wait times, prices, and distance for transport options. 
-- Test location/transport options and fix bugs/issues. 
+- Test location/transport options and fix bugs/issues.
   
+3. As a visitor, I want to receive recommendations based on budget preferences so that I can choose an affordable transport option.
+•	Estimated Time: 6 days (Stephen Keyen)
+- tasks (3days) - Defining budget criteria (i.e low: <$5, medium: $5-$10, high: >$10)
+- Modify API for budget filtering
+- Write unit tests(using pytest)
+- tasks2 (3days) - Enhance sorting logic
+- Add Error handling
+- Optimize API response format
+- final testing and documentation
+
+4.	As a visitor, I want to receive real-time traffic and transit updates so that I can avoid delays.
+•	Estimated Time: 12 days
+5.	As a visitor, I want to enter my location and destination to receive transport recommendations to choose the best option.
+•	Estimated Time: 10 days
 6.	As an event attendee, I want to filter transport options based on sustainability (e.g., public transport and e-scooters) so that I can choose eco-friendly options.
 •	Estimated Time: 6 days (Rohini Vishwanathan)
-#### Task Breakdown & Timeline  
+7.	As a ride-sharing user, I want to integrate my Uber/Lyft account so that I can book a ride directly from the app.
+•	Estimated Time: 15 days
+8.	As an admin, I want to manage transport service integrations to ensure accurate data updates.
+•	Estimated Time: 10 days
+9.	As a developer, I want to integrate an interactive map feature so that users can visualize transport routes.
+•	Estimated Time: 14 days
+10.	As a visitor, I want the app to offer multilingual support so that I can navigate it in my preferred language.
+•	Estimated Time: 7 days
+
+---
+### Task Breakdown & Timeline (to be updated) 
 
 ##### Day 1: Research & Data Gathering  
 - Define what "sustainable transport" means (public transport, e-scooters, bike-sharing, EV ride-shares). *(½ day)*  
@@ -76,33 +99,45 @@ User Stories
 - Gather user feedback and make refinements. *(½ day)*  
 
 ##### Day 6: Final Review & Documentation  
-- Document how the filter works and how developers can update it. *(1 day)*  
+- Document how the filter works and how developers can update it. *(1 day)*
+---
 
-7.	As a ride-sharing user, I want to integrate my Uber/Lyft account so that I can book a ride directly from the app.
-•	Estimated Time: 15 days
-8.	As a visitor, I want to receive recommendations based on budget preferences so that I can choose an affordable transport option.
-•	Estimated Time: 6 days (Stephen Keyen)
-- tasks (3days) - Defining budget criteria (i.e low: <$5, medium: $5-$10, high: >$10)
-- Modify API for budget filtering
-- Write unit tests(using pytest)
-- tasks2 (3days) - Enhance sorting logic
-- Add Error handling
-- Optimize API response format
-- final testing and documentation
-9.	As an admin, I want to manage transport service integrations to ensure accurate data updates.
-•	Estimated Time: 10 days
-10.	As a developer, I want to integrate an interactive map feature so that users can visualize transport routes.
-•	Estimated Time: 14 days
-12.	As a visitor, I want the app to offer multilingual support so that I can navigate it in my preferred language.
-•	Estimated Time: 7 days
+## Tech Stack
 
-Milestone 1: 
-Meeting Notes
+- **Language:** Python 3.11  
+- **Framework:** Flask  
+- **Frontend:** HTML, CSS (with embedded styling)  
+- **APIs:** Google Maps API, LA Metro API, Uber/Lyft APIs  
+- **Database:** (To be added)  
+- **Version Control:** Git & GitHub  
+- **Testing:** `pytest`,  
+- **Package Management:** (To be added)
+
+---
+
+## Features
+
+- 🧭 Real-time navigation and transit updates  
+- 🚗 Ride-sharing integration (Uber, Lyft)  
+- 🚌 Public transport routing with time & cost estimates  
+- ♻️ Eco-friendly transport filtering (bike/scooters/EV)  
+- 🌍 Location-based and budget-conscious recommendations  
+- 📍 Interactive map with nearby stations & pickup points  
+- 🌐 Multilingual interface (planned)  
+- 🔒 Admin integration for managing transport sources
+
+---
+
+### Launch the app
+python app.py
+
+---
+## Meeting Notes (to be updated)
 
 Meeting Date: 02/26
-We briefly met to discuss our individual progress on decomposing our user stories into tasks. Each group member will be in charge of one user story and its tasks. The five user stories we will be focusing on are:
-- As a visitor, I want to enter my location and destination to receive transport recommendations so that I can choose the best option.  Estimated Time: 10 days (Rhett)
-- As a visitor, I want to see estimated travel time and cost for each transport option so that I can plan my trip effectively. Estimated Time: 7 days (Tracy)
+We briefly met to discuss our progress on decomposing our user stories into tasks. Each group member will be in charge of one user story and its tasks. The five user stories we will be focusing on are:
+- As a visitor, I want to enter my location and destination to receive transport recommendations to choose the best option.  Estimated Time: 10 days (Rhett)
+- As a visitor, I want to see the estimated travel time and cost for each transport option so that I can plan my trip effectively. Estimated Time: 7 days (Tracy)
 - As a visitor, I want to see the nearest public transport stations or ride-sharing pickup points so that I can easily access transport options. Estimated Time: 8 days (Charlize)
 - As an event attendee, I want to filter transport options based on sustainability (e.g., public transport and e-scooters) so that I can choose eco-friendly options. Estimated Time: 6 days (Rohini)
 - As a visitor, I want to receive recommendations based on budget preferences so that I can choose an affordable transport option. Estimated Time: 6 days (Stephen)

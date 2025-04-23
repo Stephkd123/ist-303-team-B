@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html><head><title>From Olympic Venue</title></head>
+<body>
+  <h1>From an Olympic Venue to a Destination</h1>
+  <form method="POST">
+    <label>Select Starting Olympic Venue:</label><br>
+    <select name="venue">
+      {% for loc in locations %}
+      <option value="{{ loc['Address'] }}">{{ loc['Location Name'] }}</option>
+      {% endfor %}
+    </select><br><br>
+
+    <label>Enter Destination Address:</label><br>
+    <input name="destination" type="text" required><br><br>
+
+    <label>Choose Mode(s):</label><br>
+    <input type="checkbox" name="mode" value="walking"> Walking<br>
+    <input type="checkbox" name="mode" value="transit"> Public Transit<br><br>
+
+    <button type="submit">Next</button>
+  </form>
+  <a href="/">← Back</a>
+</body></html>

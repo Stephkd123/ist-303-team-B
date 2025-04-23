@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html><head><title>To Olympic Venue</title></head>
+<html>
+<head>
+  <title>To Olympic Venue</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 <body>
-  <h1>From a Starting Address to Olympic Venue</h1>
-  <form method="POST">
-    <label>Enter Starting Address:</label><br>
-    <input name="start" type="text" required><br><br>
+  <div class="container">
+    <h1>Route to an Olympic Venue</h1>
 
-    <label>Select Olympic Venue Destination:</label><br>
-    <select name="venue">
-      {% for loc in locations %}
-      <option value="{{ loc['Address'] }}">{{ loc['Location Name'] }}</option>
-      {% endfor %}
-    </select><br><br>
+    <form method="POST">
+      <label>Enter Your Starting Address:</label><br>
+      <input name="start" type="text" required><br><br>
 
-    <label>Choose Mode(s):</label><br>
-    <input type="checkbox" name="mode" value="walking"> Walking<br>
-    <input type="checkbox" name="mode" value="transit"> Public Transit<br><br>
+      <label>Select Olympic Venue Destination:</label><br>
+      <select name="venue">
+        {% for loc in locations %}
+        <option value="{{ loc['Address'] }}">{{ loc['Location Name'] }}</option>
+        {% endfor %}
+      </select><br><br>
 
-    <button type="submit">Next</button>
-  </form>
-  <a href="/">← Back</a>
-</body></html>
+      <label>Choose Transport Mode(s):</label><br>
+      <input type="checkbox" name="mode" value="walking"> Walking<br>
+      <input type="checkbox" name="mode" value="transit"> Public Transit<br><br>
+
+      <button type="submit">Next</button>
+    </form>
+
+    <br>
+    <a href="/">← Back to Start</a>
+  </div>
+</body>
+</html>

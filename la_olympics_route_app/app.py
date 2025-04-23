@@ -102,7 +102,6 @@ def map():
             os.makedirs("static", exist_ok=True)
             map_obj.save("static/map.html")
 
-            # Add comparison message
             if "walking" in duration_seconds and "transit" in duration_seconds:
                 w = duration_seconds["walking"]
                 t = duration_seconds["transit"]

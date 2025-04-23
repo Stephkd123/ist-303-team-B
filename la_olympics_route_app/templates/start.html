@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html><head><title>Select Route Type</title></head>
+<html>
+<head>
+  <title>Start Your Route</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 <body>
-  <h1>Choose Route Type</h1>
-  <form action="/from_venue">
-    <button type="submit">From an Olympic Venue → Custom Destination</button>
-  </form><br>
-  <form action="/to_venue">
-    <button type="submit">From Custom Address → Olympic Venue</button>
-  </form><br>
-  <form action="/between_venues">
-    <button type="submit">Between Two Olympic Venues</button>
-  </form>
-  <form action="/my_routes">
-    <button type="submit">📌 View My Saved Routes</button>
-  </form>  
-</body></html>
+  <div class="container">
+    <h1>LA Olympics Routes</h1>
+
+    <p>Select an option:</p>
+
+    <form action="/between_venues">
+      <button type="submit">Between Olympic Venues</button>
+    </form>
+    <br>
+    <form action="/to_venue">
+      <button type="submit">To an Olympic Venue</button>
+    </form>
+    <br>
+    <form action="/from_venue">
+      <button type="submit">From an Olympic Venue</button>
+    </form>
+
+    <hr>
+
+    <form action="/my_routes">
+      <button type="submit">📌 View My Saved Routes</button>
+    </form>
+  </div>
+</body>
+</html>

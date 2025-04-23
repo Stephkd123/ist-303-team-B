@@ -1,2 +1,0 @@
-agency_id,agency_name,agency_url,agency_timezone,agency_lang
-16,Los Angeles County Shuttles,http://ladpw.org/pdd/transit/,America/Los_Angeles,en

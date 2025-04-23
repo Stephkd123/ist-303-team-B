@@ -7,8 +7,7 @@ Team Members-
 4.	Tracy Gaolese
 5.	Charlize Andaya
 ---
-## GitHub Repository: https://github.com/Stephkd123/ist-303-team-B.git 
----
+
 ## Project Description
 
 The Olympic Transport Guide is an AI-driven transport recommendation application designed to assist visitors and attendees of the 2028 Los Angeles Olympic Games navigate the city efficiently. The app will provide real-time traffic updates, public transit schedules, ride-sharing integrations (Uber, Lyft), and eco-friendly transport options.

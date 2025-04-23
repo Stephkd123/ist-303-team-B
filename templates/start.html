@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Start Your Route</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    {% if session.get('user') %}
+      <div style="text-align: right;">
+        <a href="/logout" style="color: #007bff; font-weight: bold;"> Log Out</a>
+      </div>
+    {% endif %}
+  
+    <h1>Route Finder for the LA Olympics</h1>
+    <p>Select an option:</p>
+  
+    <form action="/between_venues">
+      <button type="submit">Between Olympic Venues</button>
+    </form>
+    <br>
+    <form action="/to_venue">
+      <button type="submit">To an Olympic Venue</button>
+    </form>
+    <br>
+    <form action="/from_venue">
+      <button type="submit">From an Olympic Venue</button>
+    </form>
+    <br>
+    <hr>
+    <form action="/my_routes">
+      <button type="submit">View My Saved Routes</button>
+    </form>
+  </div>
+  
+</body>
+</html>

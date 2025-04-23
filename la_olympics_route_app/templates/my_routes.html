@@ -2,32 +2,35 @@
 <html>
 <head>
   <title>My Saved Routes</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 30px; background-color: #f4f4f4; }
-    .route-card {
-      background: white; padding: 15px; border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1); margin-bottom: 15px;
-    }
-    .route-card h3 { margin: 0 0 5px; }
-    .route-card small { color: gray; }
-  </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 <body>
-  <h1>My Saved Routes</h1>
+  <div class="container">
+    <h1>My Saved Routes</h1>
 
-  {% if routes %}
-    {% for r in routes %}
-      <div class="route-card">
-        <h3>{{ r.name }}</h3>
-        <small>{{ r.mode.title() }}</small><br>
-        <strong>From:</strong> {{ r.start }}<br>
-        <strong>To:</strong> {{ r.destination }}
-      </div>
-    {% endfor %}
-  {% else %}
-    <p>No routes saved yet.</p>
-  {% endif %}
+    {% if routes %}
+      {% for r in routes %}
+        <div class="route-card">
+          <h3>{{ r.name }}</h3>
+          <small>{{ r.mode.title() }}</small><br>
+          <strong>From:</strong> {{ r.start }}<br>
+          <strong>To:</strong> {{ r.destination }}
 
-  <a href="/">← Back to Start</a>
+          <form method="POST" action="/delete_route/{{ loop.index0 }}">
+            <button type="submit" style="background: red; color: white; border: none; padding: 5px 10px; border-radius: 5px; margin-top: 10px;">
+              🗑 Delete
+            </button>
+          </form>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No routes saved yet.</p>
+    {% endif %}
+
+    <br>
+    <a href="/">← Back to Start</a>
+  </div>
 </body>
+
 </html>

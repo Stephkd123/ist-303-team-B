@@ -154,6 +154,7 @@ def delete_route(index):
         session["saved_routes"] = saved
     return redirect("/my_routes")
 
+# add logout function
 @app.route("/logout")
 def logout():
     session.clear()

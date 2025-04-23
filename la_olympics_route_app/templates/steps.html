@@ -2,71 +2,42 @@
 <html>
 <head>
   <title>{{ mode }} Directions</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 30px;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      color: #333;
-    }
-    ul {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      list-style-type: decimal;
-      max-width: 600px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      text-decoration: none;
-      color: #007BFF;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+  <div class="container">
+    <h1>{{ mode }} Directions</h1>
 
-  <h1>{{ mode }} Directions</h1>
-
-  {% if steps %}
-    <ul>
-      {% for step in steps %}
-        <li>{{ step|safe }}</li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>No directions available.</p>
-  {% endif %}
-
-  <hr>
-  <h3>Save This Route</h3>
-  <form method="POST">
-    <input type="hidden" name="show_steps" value="{{ mode|lower }}">
-    <label for="save_name">Route Name:</label>
-    <input type="text" name="save_name" required>
-    <button type="submit">Save Route</button>
+    {% if steps %}
+      <ul>
+        {% for step in steps %}
+          <li>{{ step|safe }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No directions available.</p>
+    {% endif %}
+  
+    <hr>
+    <h3>Save This Route</h3>
+    <form method="POST">
+      <input type="hidden" name="show_steps" value="{{ mode|lower }}">
+      <label for="save_name">Route Name:</label>
+      <input type="text" name="save_name" required>
+      <button type="submit">Save Route</button>
+    </form>
+    
+    {% if route_name %}
+      <p style="color: green;">Route "{{ route_name }}" saved successfully!</p>
+    {% endif %}
+    
+    <a href="/map">← Back to Map</a>
+    
+    <br>
+  
+    <form action="/my_routes">
+      <button type="submit">📌 View My Saved Routes</button>
   </form>
-  
-  {% if route_name %}
-    <p style="color: green;">Route "{{ route_name }}" saved successfully!</p>
-  {% endif %}
-  
-  <a href="/map">← Back to Map</a>
-  
-  <br>
-
-  <form action="/my_routes">
-    <button type="submit">📌 View My Saved Routes</button>
-</form>
-
-
+  </div>
 </body>
 </html>

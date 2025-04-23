@@ -109,8 +109,10 @@ def map():
                 diff = abs(w - t) // 60
                 if w < t:
                     message = f"Walking is faster by {diff} minutes."
-                else:
+                elif w > t:
                     message = f"Public transit is faster by {diff} minutes."
+                else:
+                    message = f"Walking and public transit take the same amount of time" 
         else:
             return "No directions available."
 
@@ -145,6 +147,13 @@ def my_routes():
     saved_routes = session.get("saved_routes", [])
     return render_template("my_routes.html", routes=saved_routes)
 
+@app.route("/delete_route/<int:index>", methods=["POST"])
+def delete_route(index):
+    saved = session.get("saved_routes", [])
+    if 0 <= index < len(saved):
+        saved.pop(index)
+        session["saved_routes"] = saved
+    return redirect("/my_routes")
 
 if __name__ == "__main__":
     app.run(debug=True)

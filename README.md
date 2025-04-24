@@ -31,7 +31,7 @@ Team Members:
 ## User Stories
 
 1. As a visitor, I want to see the estimated travel time for each transport option so that I can plan my trip effectively.
-•	Estimated Time: 15 days
+-	Estimated Time: 15 days
 - Research and gather APIs to estimate travel time (e.g., Google Maps and public transit APIs).
 - Design the UI layout to display travel time estimates for different transport options.
 - Implement API integration to fetch travel time 
@@ -42,7 +42,7 @@ Team Members:
 - Document implementation details and known issues.
 
 2. As a visitor, I want to see the nearest public transport stations where I can easily access transport options.
-•	Estimated Time: 15 days
+-	Estimated Time: 15 days
 - Use GPS to find the user’s location.
 - Get data on public transport stations (bus, metro, train) APIs.
 - Show nearest locations on an interactive map. 
@@ -52,13 +52,13 @@ Team Members:
 - Test location/transport options and fix bugs/issues.
 
 3.	As a visitor, I want to enter my location and destination to receive transport recommendations to choose the best option.
-•	Estimated Time: 10 days
+-	Estimated Time: 10 days
 4.	As an event attendee, I want to filter transport options based on sustainability so that I can choose the best options.
-•	Estimated Time: 6 days 
+-	Estimated Time: 6 days 
 5.	As an admin, I want to manage transport service integrations to ensure accurate data updates.
-•	Estimated Time: 10 days
+-	Estimated Time: 10 days
 6.	As a developer, I want to integrate an interactive map feature so that users can visualize transport routes.
-•	Estimated Time: 14 days (21 days with updates)
+-	Estimated Time: 14 days (21 days with updates)
 
 ---
 ### Task Breakdown & Timeline 
@@ -68,7 +68,7 @@ Team Members:
 - Get data from APIs (Google Maps API, LA Metro API) to pull real-time sustainable transport options. *(½ day)*  
 
 ##### Day 2: UI/UX Design  
-- Build a user friendly UI to let users select sustainable transport options. *(1 day)*  
+- Build a user-friendly UI to let users select sustainable transport options. *(1 day)*  
 
 ##### Day 3: Backend & Data Processing  
 

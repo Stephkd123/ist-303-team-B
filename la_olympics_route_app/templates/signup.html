@@ -1,0 +1,52 @@
+kkk<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up - LA Olympics</title>
+    <style>
+        body {
+            background-image: url("../static/background.jpeg");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .signup-container {
+            margin-top: 150px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 250px;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            width: 150px;
+            padding: 10px;
+            background-color: #004aad;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #003a88;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Sign Up for LA Olympics 2028 Access</h1>
+        <form method="POST" action="/signup">
+            <input type="text" name="username" placeholder="Create Username" required><br>
+            <input type="password" name="password" placeholder="Create Password" required><br>
+            <input type="submit" value="Sign Up">
+        </form>
+        <p>Already have an account? <a href="/login" style="color: #fff; text-decoration: underline;">Login here</a></p>
+    </div>
+</body>
+</html>
+

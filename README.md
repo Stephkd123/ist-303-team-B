@@ -11,7 +11,7 @@ Team Members:
 
 ## Project Description
 
-The Olympic Transport Guide is a transport recommendation application designed to assist visitors and attendees of the 2028 Los Angeles Olympic Games navigate the city efficiently. The app provides public transit schedules and transport options. The system personalizes recommendations based on user location, preferences, and time constraints to ensure an optimal travel experience during the event.
+### The Olympic Transport Guide is a transport recommendation application designed to assist visitors and attendees of the 2028 Los Angeles Olympic Games navigate the city efficiently. The app provides public transit schedules and transport options. The system personalizes recommendations based on user location, preferences, and time constraints to ensure an optimal travel experience during the event.
 ---
 
 

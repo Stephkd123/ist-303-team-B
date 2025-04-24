@@ -120,13 +120,13 @@ The group discussed our sprint tracking method, which uses a burndown chart to m
 ---
 ### Installations
 
-pip install Flask
-pip install -r requirements.txt
+> pip install Flask
+> pip install -r requirements.txt
   
 
 ### Launch the app
-$env:FLASK_APP = "la_olympics_route_app.app"
-flask run
+> $env:FLASK_APP = "la_olympics_route_app.app"
+> flask run
 
 ---
 ## Team meeting notes

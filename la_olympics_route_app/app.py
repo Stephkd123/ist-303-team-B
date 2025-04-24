@@ -23,7 +23,7 @@ locations = df.to_dict(orient="records")
 
 @app.route("/")
 def start():
-    return render_template("start.html")
+    return render_template("login.html")
 
 @app.route("/from_venue", methods=["GET", "POST"])
 def from_venue():
@@ -173,7 +173,7 @@ def login():
         if user and check_password_hash(user.password, password):
             session['user_id'] = user.id
             flash("Login successful!", "success")
-            return redirect('/')
+            return redirect('/start')
         else:
             flash("Invalid credentials", "danger")
     return render_template('login.html')

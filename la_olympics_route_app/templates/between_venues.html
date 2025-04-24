@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Between Olympic Venues</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Find Route Between Olympic Venues</h1>
+
+    <form method="POST">
+      <label>Select Start Venue:</label><br>
+      <select name="start_venue">
+        {% for loc in locations %}
+        <option value="{{ loc['Address'] }}">{{ loc['Location Name'] }}</option>
+        {% endfor %}
+      </select><br><br>
+
+      <label>Select Destination Venue:</label><br>
+      <select name="end_venue">
+        {% for loc in locations %}
+        <option value="{{ loc['Address'] }}">{{ loc['Location Name'] }}</option>
+        {% endfor %}
+      </select><br><br>
+
+      <label>Choose Transport Mode(s):</label><br>
+      <input type="checkbox" name="mode" value="walking"> Walking<br>
+      <input type="checkbox" name="mode" value="transit"> Public Transit<br><br>
+
+      <button type="submit">Next</button>
+    </form>
+
+    <br>
+    <a href="/">← Back to Start</a>
+  </div>
+</body>
+</html>

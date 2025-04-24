@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Transport</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" />
+</head>
+
+<body>
+    <h1>Find Nearby Transport Stops</h1>
+
+    <!-- Address Input Section for Pickup -->
+    <div>
+        <label for="pickup_address">Enter Pickup Address:</label>
+        <input type="text" id="pickup_address" placeholder="Enter pickup address" />
+        <button onclick="getCoordinatesFromAddress('pickup')">Get Pickup Coordinates</button>
+    </div>
+
+    <div>
+        <label for="pickup_lat">Pickup Latitude:</label>
+        <input type="number" id="pickup_lat" value="37.7749" step="any" readonly>
+        <label for="pickup_lng">Pickup Longitude:</label>
+        <input type="number" id="pickup_lng" value="-122.4194" step="any" readonly>
+    </div>
+
+    <!-- Address Input Section for Dropoff -->
+    <div>
+        <label for="dropoff_address">Enter Dropoff Address:</label>
+        <input type="text" id="dropoff_address" placeholder="Enter dropoff address" />
+        <button onclick="getCoordinatesFromAddress('dropoff')">Get Dropoff Coordinates</button>
+    </div>
+
+    <div>
+        <label for="dropoff_lat">Dropoff Latitude:</label>
+        <input type="number" id="dropoff_lat" value="37.8044" step="any" readonly>
+        <label for="dropoff_lng">Dropoff Longitude:</label>
+        <input type="number" id="dropoff_lng" value="-122.2711" step="any" readonly>
+    </div>
+
+    <button onclick="getNearbyTransport()">Get Nearby Transport</button>
+
+    <div id="map" style="width: 100%; height: 500px;"></div>
+
+    <div id="route_info" style="margin-top: 20px;"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script>
+
+    <script>
+        // This function will fetch the coordinates for both pickup and dropoff
+        function getCoordinatesFromAddress(locationType) {
+            const address = document.getElementById(locationType + '_address').value;
+            if (!address) {
+                alert('Please enter an address');
+                return;
+            }
+
+            const url = `/get_lat_lng_from_address?address=${address}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.lat && data.lng) {
+                        document.getElementById(locationType + '_lat').value = data.lat;
+                        document.getElementById(locationType + '_lng').value = data.lng;
+                    } else {
+                        alert(locationType.charAt(0).toUpperCase() + locationType.slice(1) + ' address not found');
+                    }
+                })
+                .catch(error => console.error('Error fetching coordinates:', error));
+        }
+
+        // Function to get nearby transport for both pickup and dropoff locations
+        function getNearbyTransport() {
+            const pickupLat = document.getElementById('pickup_lat').value;
+            const pickupLng = document.getElementById('pickup_lng').value;
+            const dropoffLat = document.getElementById('dropoff_lat').value;
+            const dropoffLng = document.getElementById('dropoff_lng').value;
+
+            const url = `/get_nearby_transport?pickup_lat=${pickupLat}&pickup_lng=${pickupLng}&dropoff_lat=${dropoffLat}&dropoff_lng=${dropoffLng}`;
+
+            document.getElementById('map').innerHTML = "<p>Loading map...</p>";
+        document.getElementById('route_info').innerHTML = "";
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById('route_info').innerHTML = `<p style="color:red;">${data.error}</p>`;
+                    return;
+                }
+
+                document.getElementById('map').innerHTML = data.map;
+
+                let infoHTML = `<h3>Nearby Transit Info</h3>`;
+                infoHTML += `<p><strong>Nearest Pickup Stop:</strong> ${data.pickup_stop}</p>`;
+                infoHTML += `<p><strong>Nearest Dropoff Stop:</strong> ${data.dropoff_stop}</p>`;
+
+                if (data.routes.length > 0) {
+                    infoHTML += `<p><strong>Available Routes and Departure Times:</strong></p><ul>`;
+                    data.routes.forEach(route => {
+                        infoHTML += `<li><strong>${route.route_short_name}</strong> - ${route.route_long_name} <br><em>Next Departure: ${route.departure_time}</em></li>`;
+                    });
+                    infoHTML += `</ul>`;
+                } else {
+                    infoHTML += `<p>No direct routes found between these stops.</p>`;
+                }
+
+                document.getElementById('route_info').innerHTML = infoHTML;
+            })
+            .catch(error => {
+                console.error('Error fetching transport data:', error);
+                document.getElementById('route_info').innerHTML = `<p style="color:red;">Failed to load transport info.</p>`;
+            });
+    }
+</script>
+</body>
+
+</html>

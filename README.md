@@ -1,6 +1,6 @@
 # 🧭 Olympic Transport Guide 
 
-Team Members: 
+Team Members:
 1.	Rhett Carter
 2.	Stephen Keyen
 3.	Rohini Vishwanathan

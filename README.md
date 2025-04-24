@@ -103,7 +103,7 @@ The group discussed our sprint tracking method, which uses a burndown chart to m
 - **Language:** Python 3.12  
 - **Framework:** Flask  
 - **Frontend:** HTML, CSS (with embedded styling)  
-- **APIs:** Google Maps API, LA Metro API, Uber/Lyft APIs  
+- **APIs:** Google Maps API, LA Metro API  
 - **Database:** SQLite  
 - **Version Control:** Git & GitHub  
 - **Testing:** `pytest` 

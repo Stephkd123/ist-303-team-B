@@ -129,10 +129,11 @@ python app.py
 ## Team meeting notes
 
 During meetings held twice a week over Microsoft Teams on Wednesdays and Sundays, and daily communications via SMS group chat, the team focused on aligning agile planning efforts with the development of the Olympic Transport Guide project. Further discussions were made on decomposing the key user stories into actionable tasks, and responsibilities were formally assigned to each team member based on their area of focus.
+
 Assigned User Stories & Ownership:
-•	Rhett and Charlize – Enter location and destination for transport recommendations and identify nearest public transport stations
-•	Rohini and Tracy – User landing page, login, and signup
-•	Stephen – Database development and collaborating with both groups as a scrum master
+-	**Rhett and Charlize** – Enter location and destination for transport recommendations and identify nearest public transport stations
+-	**Rohini and Tracy** – User landing page, login, and signup
+-	**Stephen** – Database development and collaborating with both groups as a scrum master
 Members committed to developing a breakdown of subtasks for their assigned work. These subtasks served as the foundation for the project timeline and were incorporated into the README.md and project planning documentation.
 
 

@@ -89,7 +89,7 @@ Team Members:
 
 ## Burndown chart
 
-![Burndown Chart](Enhanced_Burndown_Chart)
+![Burndown Chart](part%20-D/Enhanced_Burndown_Chart.png)
 
 ## Task Planning & Burndown Integration:
 

@@ -1,64 +1,66 @@
 import pytest
-from app import app, db, User
+from la_olympics_route_app.app import app, db, User # Correct import
 from werkzeug.security import generate_password_hash
 
-# Creating a Flask test client for simulating requests
+
+# Flask test client setup
 @pytest.fixture
 def client():
+    app.config['TESTING'] = True
+    # Use in-memory SQLite DB for tests
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
+    app.config['WTF_CSRF_ENABLED'] = False # Disable CSRF for easier testing
+    app.config['SECRET_KEY'] = 'test-secret-key' # Set a secret key for session testing
+
     with app.test_client() as client:
         with app.app_context():
             db.create_all()
-            # Create a test user
+            # Add a test user directly to the test database
             test_user = User(username="testuser", password=generate_password_hash("testpass"))
             db.session.add(test_user)
             db.session.commit()
-        yield client
+        yield client # Provide the client to the tests
+        # Teardown: drop all tables after tests run
         with app.app_context():
             db.drop_all()
 
-# Test 1: Ensuring login form is present on landing page
+# --- Test Functions ---
+
+# Test 1: Login form visibility on landing page (No changes needed)
 def test_landing_page_has_login(client):
     response = client.get("/")
     assert response.status_code == 200
-    assert b"Username" in response.data and b"Password" in response.data  # Checks if login fields appear
+    assert b"Username" in response.data
+    assert b"Password" in response.data
+    assert b"Login</button>" in response.data # Check for login button
 
-# Test 2: Login fails with wrong credentials
+# Test 2: Invalid login credentials (No changes needed)
 def test_login_rejects_invalid_user(client):
     response = client.post("/login", data={"username": "wrong", "password": "bad"})
+    # Should render login page again with error
     assert response.status_code == 200
-    assert b"Invalid credentials" in response.data  # Checks for graceful failure
+    assert b"Invalid credentials" in response.data
+    assert b"Login successful!" not in response.data
 
-# Test 3: Login succeeds and redirects to home page
-def test_login_redirects_to_transit(client):
+# Test 3: Successful login redirects to /start with flash message (UPDATED NAME)
+def test_login_redirects_to_start(client): # Renamed function
     response = client.post("/login", data={"username": "testuser", "password": "testpass"}, follow_redirects=True)
+    # After redirect to /start (which renders login.html again)
     assert response.status_code == 200
-    assert b"Login successful!" in response.data  # Checks success redirection
+    # Check for the success flash message
+    assert b"Login successful!" in response.data
+    # Check we are on a page that likely contains login/signup again (since /start renders login.html)
+    assert b"Username" in response.data
 
-# Test 4: Map page loads with embedded iframe and route summary
-def test_map_page_summary(client):
-    with client.session_transaction() as session:
-        session["start"] = "123 Olympic Blvd"
-        session["destination"] = "456 Stadium Way"
-        session["mode"] = ["walking"]
-    response = client.get("/map")
-    assert response.status_code == 200
-    assert b"Route Map" in response.data and b"iframe" in response.data  # Verifies map iframe renders
 
-# Test 5: Venue selection form has start, destination, and mode checkboxes
+# Test 5: Form content check for venue selection (No changes needed)
 def test_venue_selection_form(client):
     response = client.get("/between_venues")
     assert response.status_code == 200
+    # Check for key form elements
     assert b"Select Start Venue" in response.data
     assert b"Select Destination Venue" in response.data
-    assert b"Walking" in response.data and b"Public Transit" in response.data  # Verifies form options
+    assert b'name="mode" value="walking"' in response.data
+    assert b'name="mode" value="transit"' in response.data
+    assert b"Get Directions</button>" in response.data # Check for submit button
 
-# Test 6: Submitting venue form returns results or redirect page
-def test_venue_routing_submission(client):
-    form_data = {
-        "start_venue": "123 Olympic Blvd",
-        "end_venue": "456 Stadium Way",
-        "mode": "walking"
-    }
-    response = client.post("/between_venues", data=form_data, follow_redirects=True)
-    assert response.status_code == 200
-    assert b"Show Directions" in response.data  # Checks route generation

@@ -23,7 +23,7 @@ locations = df.to_dict(orient="records")
 
 @app.route("/")
 def start():
-    return render_template("login.html")
+    return render_template("login")
 
 @app.route("/from_venue", methods=["GET", "POST"])
 def from_venue():

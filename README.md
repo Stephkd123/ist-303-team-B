@@ -94,7 +94,8 @@ Team Members:
 ## Task Planning & Burndown Integration:
 
 The group discussed our sprint tracking method, which uses a burndown chart to monitor progress. The chart is structured over a 15-day sprint, with task estimates totaling 77 workdays. It tracks both ideal progress and actual task completion, visualizes sprint health, and adapts the workflow accordingly.
-•	The final burndown chart is being maintained collaboratively and reflects updates from all team members.
+
+- The final burndown chart is being maintained collaboratively and reflects updates from all team members.
 
 ---
 

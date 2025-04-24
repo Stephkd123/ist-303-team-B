@@ -16,6 +16,7 @@ Team Members:
 
 
 ## Relevant Project Stakeholders
+
 1.	End Users (Olympic Visitors & Tourists): Travelers needing real-time transport recommendations.
 2.	Los Angeles Public Transit Authorities: Agencies managing buses, metro, and other public transport systems.
 4.	City of Los Angeles Government: Regulatory bodies overseeing transport policies.
@@ -88,7 +89,7 @@ Team Members:
 
 ## Burndown chart
 
-![alt text](image.png)
+![Burndown Chart](Enhanced_Burndown_Chart)
 
 ## Task Planning & Burndown Integration:
 
@@ -120,15 +121,17 @@ The group discussed our sprint tracking method, which uses a burndown chart to m
 ### Installations
 
 pip install Flask
+pip install -r requirements.txt
   
 
 ### Launch the app
-python app.py
+$env:FLASK_APP = "la_olympics_route_app.app"
+flask run
 
 ---
 ## Team meeting notes
 
-During meetings held twice a week over Microsoft Teams on Wednesdays and Sundays, and daily communications via SMS group chat, the team focused on aligning agile planning efforts with the development of the Olympic Transport Guide project. Further discussions were made on decomposing the key user stories into actionable tasks, and responsibilities were formally assigned to each team member based on their area of focus.
+During meetings held twice a week on Wednesdays and Sundays over Microsoft Teams and daily communications via SMS group chat, the team focused on aligning agile planning efforts with the development of the Olympic Transport Guide project. Additional discussions were made on decomposing the key user stories into actionable tasks, and responsibilities were formally assigned to each team member based on their area of focus.
 
 Assigned User Stories & Ownership:
 -	**Rhett and Charlize** – Enter location and destination for transport recommendations and identify nearest public transport stations

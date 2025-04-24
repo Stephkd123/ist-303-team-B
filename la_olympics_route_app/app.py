@@ -23,7 +23,7 @@ locations = df.to_dict(orient="records")
 
 @app.route("/")
 def start():
-    return render_template("login")
+    return render_template("login.html")
 
 @app.route("/from_venue", methods=["GET", "POST"])
 def from_venue():
@@ -183,7 +183,7 @@ def login():
 def signup():
     if request.method == 'POST':
         username = request.form['username']
-        password = generate_password_hash(request.form['password'])
+        password = generate_password_hash(request.form['password'], method='pbkdf2:sha256')
         if User.query.filter_by(username=username).first():
             flash("Username already exists", "warning")
         else:
@@ -204,6 +204,11 @@ def logout():
 #user table
 with app.app_context():
     db.create_all()
+
+@app.route("/start")
+def start_page():
+    return render_template("start.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

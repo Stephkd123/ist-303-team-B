@@ -67,7 +67,7 @@ Team Members:
 - Get data from APIs (Google Maps API, LA Metro API) to pull real-time sustainable transport options. *(½ day)*  
 
 ##### Day 2: UI/UX Design  
-- Build a user firendly UI to let users select sustainable transport options. *(1 day)*  
+- Build a user friendly UI to let users select sustainable transport options. *(1 day)*  
 
 ##### Day 3: Backend & Data Processing  
 
@@ -135,7 +135,9 @@ Assigned User Stories & Ownership:
 -	**Rohini and Tracy** – User landing page, login, and signup
 -	**Stephen** – Database development and collaborating with both groups as a scrum master
 Members committed to developing a breakdown of subtasks for their assigned work. These subtasks served as the foundation for the project timeline and were incorporated into the README.md and project planning documentation.
-
+---
+## Lesson learned
+This project has strengthened our skills in Flask development, API integration, team-based Git workflows, and the practical use of agile frameworks in real-world development.
 
 
 
